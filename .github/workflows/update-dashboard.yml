@@ -1,0 +1,38 @@
+name: Update Dashboard
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 09:00 BRT (UTC-3) diariamente
+  workflow_dispatch:         # disparo manual pela UI do GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Gerar dashboard
+        env:
+          MASTER_SHEET_ID: ${{ secrets.MASTER_SHEET_ID }}
+          OUTPUT_DIR: docs
+        run: python gerar_dashboard.py
+
+      - name: Commit e push se houver mudanças
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html docs/dashboard_tv.html
+          git diff --staged --quiet || \
+            git commit -m "chore: atualiza dashboard $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

@@ -1,0 +1,144 @@
+[
+  {
+    "id": "83339",
+    "nome": "Unsol",
+    "problemas": {
+      "acompanhamento": {
+        "Agentes/Operadores": {
+          "buscava": [
+            "quantidade de agente",
+            "quantidade de operador",
+            "quantida de operador"
+          ],
+          "encontrados_no_bloco": [
+            "MRR Acumulado",
+            "MRR Vendido",
+            "Volume Abordado",
+            "Volume Vendido",
+            "Taxa de Conversão",
+            "Ticket Médio",
+            "Safra de Negócio",
+            "Clientes em Carteira",
+            "Volume Indicações"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "7771",
+    "nome": "DW Carulli Ltda - OmegaSat Segurança e Energia Solar",
+    "problemas": {
+      "acompanhamento": {
+        "Agentes/Operadores": {
+          "buscava": [
+            "quantidade de agente",
+            "quantidade de operador",
+            "quantida de operador"
+          ],
+          "encontrados_no_bloco": [
+            "MRR Acumulado",
+            "MRR Vendido",
+            "Volume Abordado",
+            "Volume Vendido",
+            "Taxa de Conversão",
+            "Ticket Médio",
+            "Safra de Negócio",
+            "Clientes em Carteira",
+            "Volume Indicações"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "19843",
+    "nome": "CRITERIA ENERGIA",
+    "problemas": {
+      "acompanhamento": {
+        "Safra de Negócio": {
+          "buscava": [
+            "safra de negocio"
+          ],
+          "encontrados_no_bloco": [
+            "MRR Acumulado",
+            "MRR Vendido",
+            "Volume Abordado",
+            "Volume Vendido",
+            "Volume perdido",
+            "Taxa de Conversão",
+            "Ticket Médio",
+            "Quantida de Operadores",
+            "Novos Clientes",
+            "Novas Degustações entregues",
+            "Total em Carteira",
+            "Total de Usinas",
+            "Total Abordados",
+            "Total Antigos em Degustação",
+            "Total Pagantes",
+            "Total Perdidos",
+            "Volume Indicações"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "457645",
+    "nome": "Innovatis Engenharia e Sustentabilidade",
+    "problemas": {
+      "acompanhamento": {
+        "Safra de Negócio": {
+          "buscava": [
+            "safra de negocio"
+          ],
+          "encontrados_no_bloco": [
+            "MRR Acumulado",
+            "MRR Vendido",
+            "Volume Abordado",
+            "Volume Vendido",
+            "Volume perdido",
+            "Taxa de Conversão",
+            "Ticket Médio",
+            "Quantida de Operadores",
+            "Novos Clientes",
+            "Degustações entregues",
+            "Total em Carteira",
+            "Total de Usinas",
+            "Total Abordados",
+            "Clientes em Degustação",
+            "Total Pagantes",
+            "Total Perdidos",
+            "Volume Indicações"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": "16091",
+    "nome": "PREVENERGY ENERGIA SOLAR",
+    "problemas": {
+      "acompanhamento": {
+        "Agentes/Operadores": {
+          "buscava": [
+            "quantidade de agente",
+            "quantidade de operador",
+            "quantida de operador"
+          ],
+          "encontrados_no_bloco": [
+            "MRR Acumulado",
+            "MRR Vendido",
+            "Volume Abordado",
+            "Volume Vendido",
+            "Taxa de Conversão",
+            "Ticket Médio",
+            "Safra de Negócio",
+            "Clientes em Carteira",
+            "Volume Indicações"
+          ]
+        }
+      }
+    }
+  }
+]
