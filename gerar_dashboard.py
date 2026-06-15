@@ -751,11 +751,10 @@ def main():
             all_data.append(data)
 
     all_data.sort(key=lambda x: (x['_score'] or {}).get('score') or -1, reverse=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
     gerar_diagnostico(all_data, OUTPUT_DIR)
     consolidado = consolidate(all_data)
     insights = global_insights(all_data)
-
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
     print(f'\nConsolidado: MRR={fmt_money(consolidado["total_mrr"])} | Carteira={fmt_num(consolidado["total_carteira"])} | {consolidado["counts"]}')
     html = generate_html(all_data, consolidado, insights)
     with open(OUTPUT, 'w', encoding='utf-8') as f: f.write(html)
