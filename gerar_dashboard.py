@@ -977,7 +977,73 @@ header{{background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);-webkit-backdrop-
 .scard.cl-vermelho{{border-left:3px solid var(--vermelho)}}
 .scard.cl-laranja{{border-left:3px solid var(--laranja)}}
 /* ── KPI TV-STYLE (aba Visão Geral) ── */
-.kpi-tv{{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;padding:18px 24px;background:rgba(0,0,0,0.15);border-bottom:1px solid rgba(255,255,255,0.06)}}
+.kpi-tv{{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;padding:18px 24px;background:rgba(0,0,0,0.15);border-bottom:1px solid rgba(255,255,255,0.06)}}
+/* ── NOTAS POR EMPRESA ── */
+.nota-section{{margin-top:10px;padding:12px 14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:8px}}
+.nota-section h4{{color:rgba(255,255,255,0.4);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px}}
+.nota-textarea{{width:100%;min-height:72px;padding:8px 10px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#F0F0F0;font-size:12px;font-family:inherit;resize:vertical;line-height:1.5;outline:none;box-sizing:border-box;transition:.15s}}
+.nota-textarea:focus{{border-color:rgba(59,130,246,0.5);background:rgba(255,255,255,0.07)}}
+.nota-actions{{display:flex;gap:8px;margin-top:6px;align-items:center}}
+.nota-save{{padding:5px 14px;border-radius:6px;border:none;background:rgba(59,130,246,0.8);color:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;transition:.15s}}
+.nota-save:hover{{background:#3b82f6}}
+.nota-del{{padding:5px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:rgba(255,255,255,0.35);font-size:11px;cursor:pointer;font-family:inherit;transition:.15s}}
+.nota-del:hover{{color:#ef4444;border-color:rgba(239,68,68,0.3)}}
+.nota-status{{font-size:11px;color:#22C55E;margin-left:auto;opacity:0;transition:.3s}}
+.nota-badge{{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:rgba(59,130,246,0.8);color:#fff;font-size:8px;font-weight:800;flex-shrink:0;margin-left:4px;vertical-align:middle}}
+/* ── GESTÃO DE EQUIPES ── */
+#teamsModal{{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:flex-start;justify-content:center;padding-top:60px;overflow-y:auto}}
+.tmbox{{background:#1a1f2e;border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:24px;width:560px;max-width:95vw;margin-bottom:40px}}
+.tmbox h3{{color:#F0F0F0;font-size:15px;font-weight:700;margin:0 0 4px}}
+.tmbox-sub{{color:rgba(255,255,255,0.38);font-size:12px;margin:0 0 18px}}
+.tm-new-row{{display:flex;gap:8px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.07)}}
+.tm-input{{flex:1;padding:8px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#F0F0F0;font-size:13px;font-family:inherit;outline:none;transition:.15s}}
+.tm-input:focus{{border-color:rgba(59,130,246,0.5)}}
+.tm-add-btn{{padding:8px 16px;border-radius:6px;border:none;background:rgba(59,130,246,0.8);color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}}
+.tm-add-btn:hover{{background:#3b82f6}}
+.tm-team{{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;margin-bottom:10px}}
+.tm-team-hdr{{display:flex;align-items:center;gap:10px;margin-bottom:8px}}
+.tm-team-name{{font-size:13px;font-weight:700;color:#F0F0F0;flex:1}}
+.tm-team-del{{background:none;border:none;color:rgba(255,255,255,0.25);cursor:pointer;font-size:14px;padding:2px 6px;transition:.15s}}
+.tm-team-del:hover{{color:#ef4444}}
+.tm-coord-row{{display:flex;align-items:center;gap:8px;margin-bottom:8px}}
+.tm-coord-label{{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,0.35);white-space:nowrap}}
+.tm-coord-sel{{flex:1;padding:5px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#F0F0F0;font-size:12px;font-family:inherit;outline:none}}
+.tm-members{{display:flex;flex-wrap:wrap;gap:6px}}
+.tm-member{{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:12px;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.2);font-size:11px;color:#93c5fd}}
+.tm-member-del{{background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:12px;padding:0;line-height:1}}
+.tm-member-del:hover{{color:#ef4444}}
+.tm-add-member-row{{display:flex;gap:6px;margin-top:8px}}
+.tm-empty{{color:rgba(255,255,255,0.25);font-size:12px;font-style:italic;padding:4px 0}}
+/* ── FILTRO COORDENADOR / EQUIPE ── */
+.coord-filter-row{{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding-top:6px;border-top:1px solid rgba(255,255,255,0.07)}}
+.coord-filter-label{{color:rgba(255,255,255,0.4);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}}
+.cfbtn{{padding:4px 12px;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:rgba(255,255,255,0.45);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s;white-space:nowrap}}
+.cfbtn:hover{{background:rgba(255,255,255,0.06);color:#F0F0F0}}
+.cfbtn.active{{background:rgba(168,85,247,0.15);border-color:rgba(168,85,247,0.5);color:#d8b4fe}}
+.teams-btn{{padding:4px 10px;border-radius:14px;border:1px solid rgba(255,255,255,0.1);background:transparent;color:rgba(255,255,255,0.3);font-size:11px;cursor:pointer;font-family:inherit;transition:.15s;margin-left:auto}}
+.teams-btn:hover{{color:#F0F0F0;border-color:rgba(255,255,255,0.25)}}
+/* ── ALERTA ANALISTA PV + BAIXA EXECUÇÃO ── */
+.pv-alert-section{{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.2);border-radius:10px;padding:14px 16px;margin-bottom:14px}}
+.pv-alert-hdr{{display:flex;align-items:center;gap:8px;margin-bottom:10px}}
+.pv-alert-title{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#fbbf24}}
+.pv-alert-count{{background:rgba(251,191,36,0.2);color:#fbbf24;border-radius:10px;padding:2px 8px;font-size:11px;font-weight:800}}
+.pv-alert-item{{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05)}}
+.pv-alert-item:last-child{{border-bottom:none}}
+.pv-alert-nome{{flex:1;font-size:12px;font-weight:600;color:rgba(255,255,255,0.8)}}
+.pv-alert-score{{font-size:11px;font-weight:700;color:#ef4444}}
+.pv-alert-agentes{{font-size:11px;color:#fbbf24;font-weight:700}}
+.pv-badge{{display:inline-flex;align-items:center;gap:3px;padding:1px 6px;border-radius:8px;background:rgba(251,191,36,0.15);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;font-size:9px;font-weight:800;vertical-align:middle;margin-left:4px}}
+/* ── TABELA NOS BLOCOS DE DETALHE ── */
+.bloco-table{{width:100%;border-collapse:collapse;font-size:12px}}
+.bloco-table thead tr{{border-bottom:1px solid rgba(255,255,255,0.1)}}
+.bloco-table th{{padding:6px 10px;color:rgba(255,255,255,0.38);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left}}
+.bloco-table th.right{{text-align:right}}
+.bloco-table td{{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:middle}}
+.bloco-table tr:last-child td{{border-bottom:none}}
+.bloco-table tr:hover td{{background:rgba(255,255,255,0.02)}}
+.bt-name{{font-weight:500;color:rgba(255,255,255,0.85);display:flex;align-items:center;gap:5px;flex-wrap:wrap}}
+.bt-val{{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}}
+.bt-eff{{text-align:right}}
 .kpi-tv-card{{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:18px 20px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}}
 .kpi-tv-card::before{{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--kac),transparent);opacity:.55}}
 .kpi-tv-head{{display:flex;align-items:center;gap:8px}}
@@ -1239,6 +1305,22 @@ tr.drow td{{padding:0;background:rgba(0,0,0,0.35)}}
   </div>
 </div>
 
+<!-- ═══ MODAL: GESTÃO DE EQUIPES ═══ -->
+<div id="teamsModal" onclick="if(event.target===this)closeTeamsModal()">
+  <div class="tmbox">
+    <h3>⚙ Gestão de Equipes</h3>
+    <p class="tmbox-sub">Agrupe consultores em equipes. Os dados ficam salvos no navegador (localStorage).</p>
+    <div class="tm-new-row">
+      <input class="tm-input" id="tm-new-name" placeholder="Nome da equipe (ex: Equipe Caveira)">
+      <button class="tm-add-btn" onclick="addTeam()">+ Criar Equipe</button>
+    </div>
+    <div id="tm-teams-list"></div>
+    <div style="display:flex;justify-content:flex-end;margin-top:16px">
+      <button class="smcancel" onclick="closeTeamsModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+
 <div class="tabs" id="tabBar">
   <div class="tab active"   onclick="switchTab('geral')">Visão Geral & Insights</div>
   <div class="tab"          onclick="switchTab('ranking')">Rankings Detalhados</div>
@@ -1291,6 +1373,12 @@ tr.drow td{{padding:0;background:rgba(0,0,0,0.35)}}
       <button class="mfbtn" onclick="setMes(11,this)">Nov</button>
       <button class="mfbtn" onclick="setMes(12,this)">Dez</button>
       <span id="mesLabel" style="margin-left:6px;color:#F59E0B;font-size:11px;font-weight:700;align-self:center"></span>
+    </div>
+    <div class="filters coord-filter-row" id="coordFilterRow" style="gap:6px;padding-top:6px">
+      <span class="coord-filter-label">Equipe:</span>
+      <button class="cfbtn active" onclick="setCoordenador('',this)">Todas</button>
+      <div id="coordBtns" style="display:contents"></div>
+      <button class="teams-btn" onclick="openTeamsModal()" title="Gerenciar equipes">⚙ Equipes</button>
     </div>
     <div id="fonteBanner" style="display:none;margin-bottom:10px;padding:8px 14px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.18);border-radius:6px;font-size:11px;color:rgba(255,255,255,0.55);line-height:1.6">
       <span id="fonteTexto"></span>
@@ -1385,6 +1473,8 @@ tr.drow td{{padding:0;background:rgba(0,0,0,0.35)}}
       <h3>Agentes PV — Volume Abordado <span style="color:rgba(255,255,255,0.35);font-size:10px;font-weight:500;text-transform:none;letter-spacing:0">linha laranja = limite 50 abordagens</span></h3>
       <div id="io-agente-abord" class="io-hbar-list io-hbar-scroll"></div>
     </div>
+    <!-- Alerta: Analista PV com baixa execução -->
+    <div id="io-pv-alert-section"></div>
     <!-- Painel de Observações CRÍTICO/ALERTA -->
     <div class="io-card-wide" id="io-obs-panel">
       <h3>Análise de Observações — CRÍTICO &amp; ALERTA <span id="io-obs-subtitle" style="color:rgba(255,255,255,0.35);font-size:10px;font-weight:500;text-transform:none;letter-spacing:0"></span></h3>
@@ -1912,6 +2002,134 @@ function renderGrowthCoverage(){{
 
 // ── TABLE ────────────────────────────────────────────────────────────────────
 let curFilter='todos', curSort={{col:'score',dir:'desc'}}, expandedId=null, curMes=0;
+let curCoordenador=''; // equipe selecionada no filtro de coordenador
+
+// ── NOTAS (localStorage) ─────────────────────────────────────────────────────
+function getNota(id){{return localStorage.getItem('sz_nota_'+id)||'';}}
+function saveNota(id,txt){{
+  if(txt.trim())localStorage.setItem('sz_nota_'+id,txt);
+  else localStorage.removeItem('sz_nota_'+id);
+}}
+function hasNota(id){{return!!localStorage.getItem('sz_nota_'+id);}}
+
+// ── EQUIPES (localStorage) ────────────────────────────────────────────────────
+function getTeams(){{
+  try{{return JSON.parse(localStorage.getItem('sz_teams')||'{{}}');}}catch{{return{{}};}}
+}}
+function saveTeams(t){{localStorage.setItem('sz_teams',JSON.stringify(t));}}
+
+function getConsultorEquipe(consultor){{
+  if(!consultor)return null;
+  const teams=getTeams();
+  for(const[nome,tm]of Object.entries(teams)){{
+    if((tm.consultores||[]).includes(consultor))return nome;
+  }}
+  return null;
+}}
+
+function buildCoordFilter(){{
+  const teams=getTeams();
+  const equipeNames=Object.keys(teams);
+  const cont=document.getElementById('coordBtns');
+  if(!cont)return;
+  let html='';
+  equipeNames.forEach(nome=>{{
+    const isAct=curCoordenador===nome;
+    html+=`<button class="cfbtn${{isAct?' active':''}}" onclick="setCoordenador('${{nome.replace(/'/g,"\\'")}}',this)">${{nome}}</button>`;
+  }});
+  // Consultores sem equipe definida
+  const consultores=[...new Set(DADOS.map(d=>d.consultor).filter(Boolean))];
+  const semEquipe=consultores.filter(c=>!getConsultorEquipe(c));
+  semEquipe.forEach(c=>{{
+    const isAct=curCoordenador===c;
+    html+=`<button class="cfbtn${{isAct?' active':''}}" onclick="setCoordenador('${{c.replace(/'/g,"\\'")}}',this)">${{c}}</button>`;
+  }});
+  cont.innerHTML=html;
+}}
+
+function setCoordenador(val,btn){{
+  curCoordenador=val; expandedId=null;
+  document.querySelectorAll('.cfbtn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  renderTable();
+}}
+
+// ── GESTÃO DE EQUIPES ─────────────────────────────────────────────────────────
+function openTeamsModal(){{
+  document.getElementById('teamsModal').style.display='flex';
+  renderTeamsList();
+}}
+function closeTeamsModal(){{
+  document.getElementById('teamsModal').style.display='none';
+  buildCoordFilter();
+  renderTable();
+}}
+function addTeam(){{
+  const inp=document.getElementById('tm-new-name');
+  const nome=inp.value.trim();
+  if(!nome)return;
+  const teams=getTeams();
+  if(!teams[nome])teams[nome]={{coordenador:'',consultores:[]}};
+  saveTeams(teams); inp.value='';
+  renderTeamsList();
+}}
+function deleteTeam(nome){{
+  const teams=getTeams(); delete teams[nome]; saveTeams(teams); renderTeamsList();
+}}
+function setCoordTeam(nome,coord){{
+  const teams=getTeams(); if(!teams[nome])return;
+  teams[nome].coordenador=coord; saveTeams(teams);
+}}
+function addMemberToTeam(nome,membro){{
+  if(!membro.trim())return;
+  const teams=getTeams(); if(!teams[nome])return;
+  if(!teams[nome].consultores.includes(membro))teams[nome].consultores.push(membro);
+  saveTeams(teams); renderTeamsList();
+}}
+function removeMemberFromTeam(nome,membro){{
+  const teams=getTeams(); if(!teams[nome])return;
+  teams[nome].consultores=teams[nome].consultores.filter(c=>c!==membro);
+  saveTeams(teams); renderTeamsList();
+}}
+function renderTeamsList(){{
+  const teams=getTeams();
+  const allConsultores=[...new Set(DADOS.map(d=>d.consultor).filter(Boolean))].sort();
+  const cont=document.getElementById('tm-teams-list');
+  if(!cont)return;
+  if(!Object.keys(teams).length){{
+    cont.innerHTML='<div class="tm-empty">Nenhuma equipe criada ainda. Dê um nome acima e clique em Criar Equipe.</div>';
+    return;
+  }}
+  cont.innerHTML=Object.entries(teams).map(([nome,tm])=>{{
+    const members=(tm.consultores||[]).map(m=>
+      `<span class="tm-member">${{m}}<button class="tm-member-del" onclick="removeMemberFromTeam('${{nome.replace(/'/g,"\\'")}}','${{m.replace(/'/g,"\\'")}}')">×</button></span>`
+    ).join('');
+    const coordOpts=allConsultores.map(c=>`<option value="${{c}}"${{(tm.coordenador===c)?' selected':''}}>${{c}}</option>`).join('');
+    const unusedConsult=allConsultores.filter(c=>!(tm.consultores||[]).includes(c));
+    const addOpts=unusedConsult.map(c=>`<option value="${{c}}">${{c}}</option>`).join('');
+    return`<div class="tm-team">
+      <div class="tm-team-hdr">
+        <span class="tm-team-name">📋 ${{nome}}</span>
+        <button class="tm-team-del" onclick="deleteTeam('${{nome.replace(/'/g,"\\'")}}')">🗑</button>
+      </div>
+      <div class="tm-coord-row">
+        <span class="tm-coord-label">Coordenador:</span>
+        <select class="tm-coord-sel" onchange="setCoordTeam('${{nome.replace(/'/g,"\\'")}}',this.value)">
+          <option value="">— Selecionar —</option>
+          ${{coordOpts}}
+        </select>
+      </div>
+      <div class="tm-members">${{members||'<span class="tm-empty">Sem membros ainda</span>'}}</div>
+      <div class="tm-add-member-row">
+        <select class="tm-input" id="tm-sel-${{nome.replace(/[^a-z0-9]/gi,'_')}}">
+          <option value="">+ Adicionar consultor</option>
+          ${{addOpts}}
+        </select>
+        <button class="tm-add-btn" onclick="(()=>{{const s=document.getElementById('tm-sel-${{nome.replace(/[^a-z0-9]/gi,'_')}}');if(s.value)addMemberToTeam('${{nome.replace(/'/g,"\\'")}}',s.value);}})()">Adicionar</button>
+      </div>
+    </div>`;
+  }}).join('');
+}}
 
 // ── FILTRO DE MÊS ─────────────────────────────────────────────────────────────
 function updateFonteBanner(m){{
@@ -2105,7 +2323,20 @@ function filteredData(){{
     else if(curFilter==='sem_tag')fm=!st;
     else fm=true;
     const sm=!q||d.nome.toLowerCase().includes(q)||d.id.includes(q);
-    return fm&&sm;
+    // Filtro de equipe/coordenador
+    let em=true;
+    if(curCoordenador){{
+      const teams=getTeams();
+      const team=teams[curCoordenador];
+      if(team){{
+        // É uma equipe definida: filtrar pelos consultores membros
+        em=(team.consultores||[]).includes(d.consultor);
+      }}else{{
+        // É um consultor individual (sem equipe)
+        em=d.consultor===curCoordenador;
+      }}
+    }}
+    return fm&&sm&&em;
   }});
 }}
 
@@ -2161,11 +2392,13 @@ function renderTable(){{
       return anos+'a'+(rm?' '+rm+'m':'');
     }})();
     const subInfo=[d.id?'ID '+d.id:'',d.consultor||'',tempoHtml].filter(x=>x).join(' · ');
+    const notaBadge=hasNota(d.id)?'<span class="nota-badge" title="Tem nota">✎</span>':'';
+    const pvBadge=(d.agentes_e!=null&&d.agentes_e>0&&d.score!=null&&d.score<35)?'<span class="pv-badge" title="Analista PV com baixa execução">⚠ PV</span>':'';
     html+=`<tr class="erow${{isExp?' expanded':''}}" onclick="toggleDet('${{d.id}}')">
       <td><span style="color:rgba(255,255,255,0.35);font-weight:700">${{rank}}</span></td>
       <td>
         <div style="display:flex;flex-direction:column;gap:1px">
-          <span style="font-weight:600">${{d.nome}}${{tagHtml}}</span>
+          <span style="font-weight:600">${{d.nome}}${{tagHtml}}${{pvBadge}}${{notaBadge}}</span>
           <span style="color:rgba(255,255,255,0.35);font-size:11px">${{subInfo}}</span>
         </div>
       </td>
@@ -2316,7 +2549,7 @@ function renderDetail(d){{
     </div>
   </div>`;
 
-  // Blocos
+  // Blocos (formato tabela)
   ['acompanhamento','seguro','servicos'].forEach(bk=>{{
     const bloco=d.blocos[bk];
     if(!bloco){{
@@ -2340,36 +2573,33 @@ function renderDetail(d){{
       const eff=calcEff(e,m);
       const s=effS(eff);
       const effFmt=eff!=null?fmtP(eff):'—';
-      const bar=eff!=null?`<div class="etrack" style="width:52px"><div class="ebar ${{s}}" style="width:${{Math.min(Math.abs(eff),150)/1.5}}%"></div></div>`:'';
+      const bar=eff!=null?`<div class="etrack" style="width:48px;display:inline-block;vertical-align:middle;margin-left:4px"><div class="ebar ${{s}}" style="height:4px;border-radius:2px;width:${{Math.min(Math.abs(eff),150)/1.5}}%"></div></div>`:'';
       const tk=tipHTML(ind.n);
       const sp=sparkline(ind.mensal||{{}});
       const isMonet=isMonetary(ind.n);
       const isPct=isPercent(ind.n);
-      function fmtV(v){{if(v==null)return'—';if(isPct)return fmtP(v*100);if(isMonet)return fmtM(v);return fmtN(v);}}
-      return`<div class="irow">
-        <div class="iname">
-          <div style="display:flex;flex-direction:column;gap:1px">
-            <div style="display:flex;align-items:center;gap:5px">
-              <span class="iname-txt">${{ind.n}}</span>
-              ${{tk}}
-            </div>
-            ${{sp}}
-          </div>
-        </div>
-        <div class="imeta">${{fmtV(m)}}</div>
-        <div class="iexec" style="color:${{sColor(s)}}">${{fmtV(e)}}</div>
-        <div class="ieff"><span class="eval ${{s}}">${{effFmt}}</span>${{bar}}</div>
-      </div>`;
+      function fmtV(v){{if(v==null)return'<span style="color:rgba(255,255,255,0.2)">—</span>';if(isPct)return fmtP(v*100);if(isMonet)return fmtM(v);return fmtN(v);}}
+      return`<tr>
+        <td class="bt-name">
+          <span>${{ind.n}}</span>${{tk}}
+          <div style="margin-top:3px">${{sp}}</div>
+        </td>
+        <td class="bt-val" style="color:rgba(255,255,255,0.5)">${{fmtV(m)}}</td>
+        <td class="bt-val" style="color:${{sColor(s)}};font-weight:700">${{fmtV(e)}}</td>
+        <td class="bt-eff"><span class="eval ${{s}}">${{effFmt}}</span>${{bar}}</td>
+      </tr>`;
     }}).join('');
     html+=`<div class="dcard">
       <div class="dcard-hdr"><span>${{BL[bk]}}</span><span style="color:rgba(255,255,255,0.35)">${{mainInds.length}} indicadores</span></div>
-      <div style="display:grid;grid-template-columns:1fr 72px 72px 86px;gap:6px;padding:6px 14px;border-bottom:1px solid rgba(255,255,255,0.08)">
-        <span style="color:rgba(255,255,255,0.38);font-size:10px;text-transform:uppercase;letter-spacing:.05em">Indicador</span>
-        <span style="color:rgba(255,255,255,0.38);font-size:10px;text-align:right">Meta</span>
-        <span style="color:rgba(255,255,255,0.38);font-size:10px;text-align:right">Exec</span>
-        <span style="color:rgba(255,255,255,0.38);font-size:10px;text-align:right">Eficiência</span>
-      </div>
-      ${{rows||'<div class="nodata">Sem dados</div>'}}
+      <table class="bloco-table">
+        <thead><tr>
+          <th>Indicador</th>
+          <th class="right">Meta</th>
+          <th class="right">Executado</th>
+          <th class="right">Eficiência</th>
+        </tr></thead>
+        <tbody>${{rows||'<tr><td colspan="4" class="nodata">Sem dados</td></tr>'}}</tbody>
+      </table>
     </div>`;
   }});
 
@@ -2380,6 +2610,22 @@ function renderDetail(d){{
     html+=`<div class="dcard"><div class="dcard-hdr">⚠️ Avisos de Parsing</div>
       <div style="padding:10px 14px;color:#ef4444;font-size:12px">${{d.erros.join('<br>')}}</div></div>`;
   }}
+
+  // Seção de notas
+  const notaKey='sz_nota_'+d.id;
+  const notaAtual=getNota(d.id);
+  const notaId='nota_ta_'+d.id.replace(/[^a-z0-9]/gi,'_');
+  const notaStId='nota_st_'+d.id.replace(/[^a-z0-9]/gi,'_');
+  html+=`<div class="dcard nota-section">
+    <h4>✎ Nota sobre esta empresa</h4>
+    <textarea class="nota-textarea" id="${{notaId}}" placeholder="Adicione observações, lembretes ou contexto sobre ${{d.nome}}…">${{notaAtual}}</textarea>
+    <div class="nota-actions">
+      <button class="nota-save" onclick="(()=>{{const t=document.getElementById('${{notaId}}');saveNota('${{d.id}}',t.value);const s=document.getElementById('${{notaStId}}');s.style.opacity=1;setTimeout(()=>s.style.opacity=0,1800);renderTable();}})()">Salvar</button>
+      <button class="nota-del" onclick="(()=>{{saveNota('${{d.id}}','');document.getElementById('${{notaId}}').value='';renderTable();}})()">Apagar</button>
+      <span class="nota-status" id="${{notaStId}}">Salvo ✓</span>
+    </div>
+  </div>`;
+
   return html;
 }}
 
@@ -2652,6 +2898,31 @@ function renderObsPanel(data){{
   document.getElementById('io-obs-content').innerHTML=html;
 }}
 
+function renderPVAlert(data){{
+  const sect=document.getElementById('io-pv-alert-section');
+  if(!sect)return;
+  // Empresas com analista PV (agentes_e > 0) mas score baixo (< 35 = vermelho)
+  const pvBaixo=data.filter(d=>d.agentes_e!=null&&d.agentes_e>0&&d.score!=null&&d.score<35)
+    .sort((a,b)=>(a.score||0)-(b.score||0));
+  if(!pvBaixo.length){{sect.innerHTML='';return;}}
+  const rows=pvBaixo.map(d=>{{
+    const consultor=d.consultor?`<span style="color:rgba(255,255,255,0.35);font-size:10px">${{d.consultor}}</span>`:'';
+    return`<div class="pv-alert-item">
+      <div class="pv-alert-nome">${{d.nome}}<br>${{consultor}}</div>
+      <span class="pv-alert-agentes">${{Math.round(d.agentes_e)}} agente${{d.agentes_e>1?'s':''}}</span>
+      <span class="pv-alert-score">Score ${{d.score}}%</span>
+    </div>`;
+  }}).join('');
+  sect.innerHTML=`<div class="io-card-wide pv-alert-section">
+    <div class="pv-alert-hdr">
+      <span class="pv-alert-title">⚠ Analista PV presente com baixa execução</span>
+      <span class="pv-alert-count">${{pvBaixo.length}} empresa${{pvBaixo.length>1?'s':''}}</span>
+    </div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.38);margin-bottom:10px">Estas empresas têm analista(s) de pós-venda registrado(s), mas score abaixo de 35% — indica execução insuficiente apesar do recurso disponível.</div>
+    ${{rows}}
+  </div>`;
+}}
+
 function renderAllIO(){{
   const data=getIOData();
   renderDonutStatus(data);
@@ -2661,6 +2932,7 @@ function renderAllIO(){{
   renderFaixasMRR(data);
   renderTempoScore(data);
   renderAgenteAbord(data);
+  renderPVAlert(data);
   renderObsPanel(data);
   renderIOTable();
 }}
@@ -2980,6 +3252,7 @@ renderInsights();
 renderRankings1st();
 renderGrowthCoverage();
 updateFonteBanner(0);
+buildCoordFilter();
 renderTable();
 </script>
 </body>
@@ -3185,7 +3458,24 @@ const KPI_DEFS=[
     ic:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'}},
   {{l:'Serviços Vendidos',s:'Acumulado no período',v:()=>fmtM(CONSOL.total_servicos),
     ac:'#f97316',rgb:'249,115,22',
-    ic:'<circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>'}}
+    ic:'<circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>'}},
+  {{l:'Tempo Médio de Gestão',s:'Empresas com data de início',v:()=>{{
+    const agora=new Date();
+    const tenures=DADOS.map(d=>{{
+      if(!d.data_inicio)return null;
+      const pts=d.data_inicio.split('/');
+      if(pts.length!==3)return null;
+      const dt=new Date(+pts[2],+pts[1]-1,+pts[0]);
+      if(isNaN(dt)||dt.getFullYear()<2000)return null;
+      return Math.max(0,Math.round((agora-dt)/(1000*60*60*24*30.44)));
+    }}).filter(v=>v!=null&&v>0);
+    if(!tenures.length)return'—';
+    const avg=Math.round(tenures.reduce((a,b)=>a+b,0)/tenures.length);
+    if(avg<12)return avg+'m';
+    return Math.floor(avg/12)+'a '+(avg%12?avg%12+'m':'');
+  }},
+    ac:'#8b5cf6',rgb:'139,92,246',
+    ic:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'}},
 ];
 
 const RANK_DEFS=[
